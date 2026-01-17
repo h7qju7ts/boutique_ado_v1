@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',#vscode preview
     'localhost',#listen for stripe webhooks
+    'my-boutique-5f4f44321bbf.herokuapp.com'
 ]
 
 

@@ -33,7 +33,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 ALLOWED_HOSTS = [
     '127.0.0.1',#vscode preview
     'localhost',#listen for stripe webhooks
-    'my-boutique-5f4f44321bbf.herokuapp.com'
+    'my-boutique-5f4f44321bbf.herokuapp.com',
 ]
 
 
@@ -118,13 +118,18 @@ SITE_ID = 1
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'boutique_ado.wsgi.application'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://my-boutique-5f4f44321bbf.herokuapp.com',
+]
 
 
 # Database

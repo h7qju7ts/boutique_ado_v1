@@ -269,13 +269,19 @@ else:
         },
     },
     'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'INFO',
+        },
         'django.core.mail': {
             'handlers': ['console'],
             'level': 'DEBUG',
+            'propagate': True,
         },
         'smtplib': {
             'handlers': ['console'],
             'level': 'DEBUG',
+            'propagate': True,
         },
     },
 }

@@ -250,3 +250,35 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+
+
+
+
+    # 
+    # 
+    # 
+    """
+    SMPT debug atempt
+    """
+    LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.core.mail': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+        'smtplib': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
+    
+EMAIL_FAIL_SILENTLY = False    
+    
